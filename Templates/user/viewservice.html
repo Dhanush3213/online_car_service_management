@@ -1,0 +1,229 @@
+
+
+      {%include "user/navbar.html" %}
+      {%load static %}
+      
+    <div id="owl-demo" class="owl-carousel owl-theme">
+      <div class="item"> <img src="{%static 'images/car1.jpg' %}" alt="car_service_center"></div>
+      <div class="item"> <img src="{%static 'images/car2.jpg' %}" alt="car_service_center"></div>
+      <div class="item"> <img src="{%static 'images/car4.jpg' %}" alt="car_service_center"></div>
+      <div class="item"> <img src="{%static 'images/car3.webp' %}" alt="car_service_center"></div>
+  </div>
+    
+              <h1 class="py-2  text-center bg-dark "style="color:white;"align="center " >Service Details</h1>
+         
+          
+          <!-- /.row -->
+        </div><!-- /.container-fluid -->
+      </div>
+      <br>
+      <div class="container">
+
+
+        <table class="table table-bordered bg-light">
+          <thead>
+            <tr scope="row">
+              <th scope="col">Title of the Service</th>
+              <th scope="col">Type of Service</th>
+              <th scope="col">Price of the Service</th>
+              <th scope="col">Short Description</th>
+              <th scope="col">No. of Services per day</th>
+             
+            </tr>
+          </thead>
+          <tbody>
+  
+  
+            <form >
+  
+  
+  
+              {% for service in service %}
+              <tr scope="row">
+  
+                <td scope="col">{{service.sname}}</td>
+                <td scope="col">{{service.stype}}</td>
+                <td scope="col">{{service.price}}</td>
+  
+  
+                <td scope="col">{{service.description}}</td>
+  
+                <td scope="col">{{service.no_services}}</td>
+            
+                <td>
+                  <a type="submit" class="btn btn-dark btn-sm" href="{% url 'login' %}"
+                    name='del'>Book</a>
+                </td>
+              </tr>
+  
+              {%endfor%}
+            </form>
+  
+  
+          </tbody>
+        </table>
+      </div>
+      <br><br>
+       <footer class="page-footer font-small mdb-color lighten-3 pt-4">
+
+        <!-- Footer Links -->
+        <div class="container text-center text-md-left">
+
+          <!-- Grid row -->
+          <div class="row">
+
+            <!-- Grid column -->
+            <div class="col-md-4 col-lg-3 mr-auto my-md-4 my-0 mt-4 mb-1">
+
+              <!-- Content -->
+              <h5 class="font-weight-bold text-uppercase mb-4">Online car service center</h5>
+              <p style="text-align: justify;">Basic services usually include a visual inspection and oil and filter change, the critical fluids in the engine such as anti-freeze, brake fluid, washer fluid, and steering fluid), are topped up. </p>
+              <p style="text-align: justify;">Also, to ensure the car is in the best condition possible, a check of up to 35 key components is carried out.</p>
+
+            </div>
+            <!-- Grid column -->
+
+            <hr class="clearfix w-100 d-md-none">
+
+            <!-- Grid column -->
+            <div class="col-md-2 col-lg-2 mx-auto my-md-4 my-0 mt-4 mb-1">
+
+              <!-- Links -->
+              <h5 class="font-weight-bold text-uppercase mb-4">About</h5>
+
+              <ul class="list-unstyled">
+                <li>
+                  <p>
+                    <a href="{%url 'index' %}" style="color: white;">HOME</a>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <a href="#!" style="color: white;">SERVICES</a>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <a href="{%url 'login' %}" style="color: white;">LOGIN</a>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <a href="{%url 'register' %}" style="color: white;">REGISTER</a>
+                  </p>
+                </li>
+              </ul>
+
+            </div>
+            <!-- Grid column -->
+
+            <hr class="clearfix w-100 d-md-none">
+
+            <!-- Grid column -->
+            <div class="col-md-4 col-lg-3 mx-auto my-md-4 my-0 mt-4 mb-1">
+
+              <!-- Contact details -->
+              <h5 class="font-weight-bold text-uppercase mb-4">Address</h5>
+
+              <ul class="list-unstyled">
+                <li>
+                  <p>
+                    <i class="fas fa-home mr-3"></i>Ujire,574240,Belthangady</p>
+                </li>
+                <li>
+                  <p>
+                    <i class="fas fa-envelope mr-3"> </i>h1337328@gmail.com</p>
+                </li>
+                <li>
+                  <p>
+                    <i class="fas fa-phone mr-3"></i> + 91 7892910705</p>
+                </li>
+                <li>
+                  <p>
+                    <i class="fas fa-print mr-3"></i> + 01 978 234 5678</p>
+                </li>
+              </ul>
+
+            </div>
+            <!-- Grid column -->
+
+            <hr class="clearfix w-100 d-md-none">
+
+            <!-- Grid column -->
+            <div class="col-md-2 col-lg-2 text-center mx-auto my-4">
+
+              <!-- Social buttons -->
+              <h5 class="font-weight-bold text-uppercase mb-4">Follow Us</h5>
+
+              <!-- Facebook -->
+              <a type="button" class="btn-floating btn-fb">
+                <i class="fab fa-facebook-f" style="color: white;"></i>
+              </a>
+              <!-- Twitter -->
+              <a type="button" class="btn-floating btn-tw">
+                <i class="fab fa-twitter" style="color: white;"></i>
+              </a>
+              <!-- Google +-->
+              <a type="button" class="btn-floating btn-gplus">
+                <i class="fab fa-google-plus-g" style="color: white;"></i>
+              </a>
+              <!-- Dribbble -->
+              <a type="button" class="btn-floating btn-dribbble">
+                <i class="fab fa-dribbble" style="color: white;"></i>
+              </a>
+
+            </div>
+            <!-- Grid column -->
+
+          </div>
+          <!-- Grid row -->
+
+        </div>
+        <!-- Footer Links -->
+
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">© 2022 Copyright:
+          <a href="https://mdbootstrap.com/"> MDBootstrap.com</a>
+        </div>
+        <!-- Copyright -->
+
+    </footer>
+    </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+    integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+    integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+    crossorigin="anonymous"></script>
+    <script>
+      $(".owl-carousel").owlCarousel({
+        navigation: true,
+        slideSpeed: 200,
+        paginationSpeed: 500,
+        items: 1,
+        itemsDesktop: true,
+        itemsDesktopSmall: false,
+        itemsTablet: false,
+        itemsMobile: false,
+        autoplay: true,
+        autoplayTimeout: 1000,
+        autoplayHoverPause: true,
+        responsive: {
+            0: {
+                items: 1,
+                loop: true
+            },
+            600: {
+                items: 1,
+                loop: true
+            },
+            1000: {
+                items: 1,
+                loop: true
+            }
+        }
+      
+      });
+      </script>
+</html>

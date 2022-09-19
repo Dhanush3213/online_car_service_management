@@ -1,0 +1,80 @@
+/*
+CSS Credit: http://www.templatemo.com/
+*/
+{%load static%}
+
+.buy_now_button a{
+	clear: both;
+	text-align: center;
+	display: block;
+	width: 100px;
+	padding: 4px 0 5px 0;
+	margin-bottom: 10px; 
+	background-color: #7f6400;
+	border: 1px solid #7f6400;
+	color: black;
+	font-weight: bold;
+	text-decoration: none;
+	border-radius: 20px;
+	margin-left: 15px;
+}
+
+
+.detail_button a{
+	clear: both;
+	text-align: center;
+	display: block;
+	width: 100px;
+	padding: 4px 0 5px 0;
+	margin-bottom: 10px; 
+	background-color: #7f6400;
+	border: 1px solid #7f6400;
+	color: black;
+	font-weight: bold;
+	text-decoration: none;
+	border-radius: 20px;
+	margin-left: 15px;
+
+}
+
+
+td,tr{
+	padding-top: 30px;
+}
+.register_button{
+	background-color: #7f6400;
+	padding: 3px;
+	padding-left: 50px;
+	padding-right: 50px;
+	border-radius: 20px;
+	font-weight: 500;
+
+}
+.login_button {
+	background-color: #7f6400;
+	padding: 3px;
+	padding-left: 50px;
+	padding-right: 50px;
+	border-radius: 20px;
+	font-weight: 500;
+}
+.book_button{
+	background-color: #7f6400;
+	padding: 3px;
+	padding-left: 50px;
+	padding-right: 50px;
+	border-radius: 20px;
+	font-weight: 500;
+}
+footer{
+    width:100%;
+    position:inherit;
+    bottom: -100px;;
+    left:0;
+	background-color:#696969;
+	color: white;
+	margin-top: -24px;
+}
+.row{
+	background-color:#696969;
+}

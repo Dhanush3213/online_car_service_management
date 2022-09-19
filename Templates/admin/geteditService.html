@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+{%load static %}
+{%include "admin/adminsidebar.html" %}
+
+<head>
+  <script src="{%static 'admin/dist/js/jquery-3.4.1.min.js' %}"></script>
+
+
+</head>
+
+
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+  <!-- Content Header (Page header) -->
+  <div class="content-header">
+    <div class="container-fluid">
+      <div class="row mb-2">
+        <div class="col-sm-6">
+          <h1 class="m-0 text-dark">Service Details</h1>
+        </div><!-- /.col -->
+        <div class="col-sm-6">
+          <ol class="breadcrumb float-sm-right">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item active">Dashboard v1</li>
+          </ol>
+        </div><!-- /.col -->
+      </div><!-- /.row -->
+    </div><!-- /.container-fluid -->
+  </div>
+  <!-- /.content-header -->
+
+  <!-- Main content -->
+  <section class="content">
+    <div class="container-fluid">
+      <div class="row">
+       
+
+        <div class="col-md-12" >
+          <div class="card card-primary">
+
+
+            <table class="table table-bordered bg-light">
+              <thead>
+                <tr scope="row">
+                  <th scope="col">Title of the Service</th>
+                  <th scope="col">Type of Service</th>
+                  <th scope="col">Price of the Service</th>
+                  <th scope="col">Short Description</th>
+                  <th scope="col">No. of Services per day</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+
+
+                <form role="form" action="{%url 'updateService' %}" method="post">
+
+
+
+                  {% for service in service %}
+                  <tr scope="row">
+
+                    <td scope="col">{{service.sname}}</td>
+                    <td scope="col">{{service.stype}}</td>
+                    <td scope="col">{{service.price}}</td>
+                    <td scope="col">{{service.description}}</td>
+                    <td scope="col">{{service.no_services}}</td>
+                    <td>
+                      <a type="submit" class="btn btn-danger btn-sm" href="{% url 'deleteservice' service.id %}" name='del'>Delete</a>
+                   </td>
+
+                  </tr>
+
+                  {%endfor%}
+                </form>
+
+
+              </tbody>
+            </table>
+
+            <!-- /.card-body -->
+
+          </div>
+        </div><!-- /.container-fluid -->
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+  <!-- /.card -->
+</div>
+
+
+<!-- /.content -->
+</div>
+<!-- /.content-wrapper -->
+
+</html>

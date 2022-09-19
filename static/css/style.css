@@ -1,0 +1,21 @@
+{%load static%}
+
+.product_box{
+border:1px solid black;
+margin-top:20px;
+margin-bottom:20px;
+padding:50px;
+}
+
+#contain{
+padding:30px;
+ -webkit-box-shadow: 1px 0px 23px 0px rgba(62, 50, 50, 0.24);
+    -moz-box-shadow:    1px 0px 23px 0px rgba(62, 50, 50, 0.24);
+    box-shadow:         1px 0px 23px 0px rgba(62, 50, 50, 0.24);
+}
+
+.banner{
+margin-bottom: 10px;
+margin-top: 10px;
+margin-left:-30px;
+}

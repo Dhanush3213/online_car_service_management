@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+{%load static %}
+{%include "admin/adminsidebar.html" %}
+<head>
+</head>
+<style>
+  body{
+    color:black;
+  }
+</style>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1 class="m-0 text-dark">View Users</h1>
+          </div><!-- /.col -->
+          <!-- <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item active">Dashboard v1</li>
+            </ol>
+          </div> --><!-- /.col -->
+        </div><!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-12">
+            
+              <div class="card-header">
+               
+              </div>
+              <!-- /.card-header -->
+            
+
+                <table class="table table-hover bg-light" >
+                  <thead>
+                    <tr scope="row">
+                      <th scope="col">Name</th>
+                      <th scope="col">Email</th>
+                      <th scope="col">Password</th>
+                      <th scope="col">Username</th>
+                      <th scope="col">User role</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                
+                
+                  <form action="">
+                    {% for user in users %}
+                    <tr scope="row">
+                     
+                      <td scope="col">{{user.firstname}}</td>
+                      <td scope="col">{{user.email}}</td>
+                      <td scope="col">{{user.loginid.username}}</td>
+                   
+        
+                      <td scope="col">{{user.loginid.password}}</td>
+                    
+                      <td scope="col">{{user.loginid.role}}</td>
+                      
+                    </tr>
+                
+                    {%endfor%}
+                    </form>
+                 
+                  </tbody>
+                </table>
+              
+              <!-- /.card-body -->
+          
+        </div>
+      </div><!-- /.container-fluid -->
+      </div>
+
+    </section>
+
+
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+
+</html>
